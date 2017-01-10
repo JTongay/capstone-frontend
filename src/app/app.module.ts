@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 //Import services
 import { GenresService } from './genres.service';
 import { FormsService } from './forms.service';
+import { UserService } from "./user.service";
 
 
 //Import routing
@@ -17,6 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     IndexComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,7 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     routing
   ],
-  providers: [GenresService, FormsService],
+  providers: [GenresService, FormsService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
