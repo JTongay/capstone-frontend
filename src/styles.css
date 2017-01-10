@@ -12,6 +12,10 @@
   margin: 0;
 }*/
 
+ul {
+  list-style: none;
+}
+
 .pr-logo {
   height: 50px;
   width: 75px;

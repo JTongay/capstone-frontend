@@ -1,0 +1,16 @@
+<h1>Sign Up</h1>
+<form (ngSubmit)="signUp(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" ngModel name="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" ngModel name="username" class="form-control" id="username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" ngModel name="password_digest" class="form-control" id="password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
