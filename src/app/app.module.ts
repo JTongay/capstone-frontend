@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 //Import services
 import { GenresService } from './genres.service';
@@ -20,6 +21,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { UsersComponent } from './users/users.component';
+import { TopicsAllComponent } from './topics-all/topics-all.component';
+import { TopicSingleComponent } from './topic-single/topic-single.component';
 
 
 @NgModule({
@@ -30,12 +33,15 @@ import { UsersComponent } from './users/users.component';
     SignupComponent,
     LoginComponent,
     AccountComponent,
-    UsersComponent
+    UsersComponent,
+    TopicsAllComponent,
+    TopicSingleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ChartsModule,
     routing
   ],
   providers: [GenresService, FormsService, UserService],

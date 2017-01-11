@@ -8,6 +8,8 @@ import { GenresService } from '../genres.service';
 })
 export class IndexComponent implements OnInit {
 
+  currentUser: any = localStorage
+
   genres: any[];
 
   constructor(private fetcher: GenresService) { }
@@ -17,7 +19,7 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fetcher.fetchGenres().subscribe(
+    this.fetcher.fetchGenres(this.currentUser.userId).subscribe(
       (data)=>{
         this.genres = data;
       }

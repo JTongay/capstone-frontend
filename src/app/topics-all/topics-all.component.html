@@ -1,0 +1,15 @@
+<p>
+  topics-all works!
+</p>
+
+<ul id="ninja-listing">
+  <div class="row text-center">
+    <li *ngFor="let topic of topics">
+        <div class="col-xs-6 col-md-4">
+          <a [routerLink]="[topic.id]" class="thumbnail">
+            <h2>{{topic.title}}</h2>
+          </a>
+        </div>
+    </li>
+  </div>
+</ul>
