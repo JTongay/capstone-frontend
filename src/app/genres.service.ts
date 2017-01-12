@@ -11,6 +11,11 @@ export class GenresService {
 
   constructor(private http:Http) { }
 
+  addNewGenre(userId: any, data: any){
+    return this.http
+    .post("https://cryptic-island-60223.herokuapp.com/api/users/" + userId + "/genres/new", data)
+  }
+
   fetchGenres(userId: any){
     return this.http.get("https://cryptic-island-60223.herokuapp.com/api/users/" + userId + "/genres/").map((response: Response)=>{
       return response.json();
@@ -35,6 +40,13 @@ export class GenresService {
     return this.http
     .get("https://cryptic-island-60223.herokuapp.com/api/users/" + userId + "/genres/" + genreId + "/topics/" + topicId + "/subjects/top").map((response: Response)=>{
       return response.json();
+    })
+  }
+
+  fetchSingleTopicAll(userId: any, genreId: any, topicId: any) {
+    return this.http
+    .get("https://cryptic-island-60223.herokuapp.com/api/users/" + userId + "/genres/" + genreId + "/topics/" + topicId + "/subjects/").map((response: Response)=>{
+      return response;
     })
   }
 

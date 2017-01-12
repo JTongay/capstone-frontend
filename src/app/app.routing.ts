@@ -6,6 +6,8 @@ import {AccountComponent} from './account/account.component';
 import {UsersComponent} from './users/users.component';
 import { TopicsAllComponent } from './topics-all/topics-all.component';
 import { TopicSingleComponent } from './topic-single/topic-single.component';
+import {VotingComponent} from './voting/voting.component';
+import { BallotFormComponent } from './ballot-form/ballot-form.component';
 import {Routes, RouterModule } from "@angular/router";
 
 
@@ -33,9 +35,18 @@ const APP_ROUTES: Routes = [
   {
     path: 'genres/:id/topics',
     component: TopicsAllComponent
-  },{
+  },
+  {
     path: 'genres/:genre_id/topics/:id',
     component: TopicSingleComponent
+  },
+  {
+    path: 'genres/:genre_id/topics/:id/vote',
+    component: VotingComponent
+  },
+  {
+    path: 'genres/:genre_id/topics/:id/add',
+    component: BallotFormComponent
   }
 ];
 

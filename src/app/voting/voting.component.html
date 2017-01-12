@@ -1,0 +1,19 @@
+<form novalidate (ngSubmit)="castVote(votes)" [formGroup]="votes">
+  <label for="first">First Tier</label>
+  <select class="form-control" formControlName="first" required>
+    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="first">{{subject?.name}}</option>
+  </select>
+  <label for="second">Second Tier</label>
+  <select class="form-control" formControlName="second" required>
+    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="second">{{subject?.name}}</option>
+  </select>
+  <label for="third">Third Tier</label>
+  <select class="form-control" formControlName="third" required>
+    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="third">{{subject?.name}}</option>
+  </select>
+  <label for="garbage">Garbage Tier</label>
+  <select class="form-control" formControlName="garbage" required>
+    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="garbage">{{subject?.name}}</option>
+  </select>
+  <input type="submit">
+</form>
