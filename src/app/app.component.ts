@@ -9,4 +9,5 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class AppComponent {
   title = 'app works!';
+  booyah = 'booyah';
 }
