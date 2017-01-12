@@ -1,0 +1,17 @@
+<ul id="ninja-listing">
+  <div class="row text-center">
+    <li *ngFor="let topic of topics">
+        <div class="col-xs-6 col-md-4">
+          <a [routerLink]="[topic.id]" class="thumbnail">
+            <h2>{{topic.title}}</h2>
+          </a>
+        </div>
+    </li>
+  </div>
+</ul>
+
+<form novalidate (ngSubmit)="addTopic(topic)" [formGroup]="topic">
+  <label for="topicTitle">Title</label>
+  <input type="text" formControlName="title" required>
+  <input type="submit">
+</form>

@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+  <h1>Power Ranking</h1>
+  <p>You can power rank shit</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+<!-- <form novalidate (ngSubmit)="addGenre(genre)" [formGroup]="genre">
+  <label for="newGenre">Add a new genre</label>
+  <input type="text" formControlName="name" value="" id="newGenre">
+  <input type="submit">
+</form> -->
+
+<ul id="ninja-listing">
+  <div class="row text-center">
+    <li *ngFor="let genre of genres">
+        <div class="col-xs-6 col-md-4">
+          <a [routerLink]="['genres', genre.id, 'topics']" class="thumbnail">
+            <h2>{{genre.name}}</h2>
+          </a>
+        </div>
+    </li>
+  </div>
+</ul>

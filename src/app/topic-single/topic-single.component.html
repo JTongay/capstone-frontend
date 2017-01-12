@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center">{{chosenTopic?.title}}</h3>
+      <div style="display: block">
+        <canvas baseChart
+        [data]="[pieChartData[0],pieChartData[1],pieChartData[2]]"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        (chartClick)="chartClicked($event)"></canvas>
+      </div>
+      <button [routerLink]="['vote']">Vote</button>
+    </div>
+    <div class="col-md-6">
+      <h2>The Ballot</h2>
+      <p><ins>Don't see a subject you like? Add it here.</ins></p>
+      <button type="button" name="button" (click)="showForm()">Add To Ballot</button>
+      <div class="add-new-subject" *ngIf="formShow">
+        <form novalidate (ngSubmit)="addNewSubject(subject)" [formGroup]="subject">
+          <label for="newSubject">Add New Subject</label>
+          <input type="text" formControlName="name" id="newSubject" required>
+          <input type="submit">
+        </form>
+      </div>
+      <div class="ballot">
+        <p *ngFor="let subject of allSubjects">{{subject?.name}} | Current Score {{subject?.score}}</p>
+      </div>
+      <h2>Twitter Feed Goes down below</h2>
+    </div>
+  </div>
+</div>
