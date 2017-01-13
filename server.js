@@ -11,7 +11,7 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-app.get('/genres/:id/topics', (req, res, next)=>{
+app.get('/genres/2/topics', (req, res, next)=>{
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 })
 
