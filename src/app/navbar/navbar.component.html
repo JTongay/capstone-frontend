@@ -1,4 +1,6 @@
-<nav class="navbar navbar-default">
+<div class="power-nav">
+
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,19 +16,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a [routerLink]="['']">Home<span class="sr-only">(current)</span></a></li>
-        <li><a [routerLink]="['signup']">Signup</a></li>
-        <li><a [routerLink]="['users']">All users</a></li>
+        <li><a href="/">Home</a></li>
+        <div *ngIf="!currentUser.loggedIn">
+          <li><a [routerLink]="['signup']">Signup</a></li>
+          <li><a [routerLink]="['login']">Log In</a></li>
+        </div>
+        <li><a [routerLink]="['users']" *ngIf="currentUser.role === admin">All users</a></li>
         <li><a [routerLink]="['users', currentUser.userId]">Your Account</a></li>
-        <li><a href="#">Something else here</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <p class="navbar-text" *ngIf="currentUser.loggedIn">Signed in as {{currentUser.userName}}</p>
-        <p class="navbar-text" *ngIf="currentUser.loggedIn === false">Log in or Create an account</p>
+        <div *ngIf="currentUser.loggedIn">
+          <p class="navbar-text">Signed in as {{currentUser.userName}}</p>
+          <p class="navbar-text" (click)="logOut()">Log Out</p>
+        </div>
+        <p class="navbar-text" *ngIf="!currentUser.loggedIn">Log in or Create an account</p>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+</div>
 <div class="container">
   <router-outlet></router-outlet>
 </div>

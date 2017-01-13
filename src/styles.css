@@ -16,7 +16,7 @@ ul {
   list-style: none;
 }
 
-.pr-logo {
-  height: 50px;
-  width: 75px;
+.power-nav {
+  background-color: black;
+  color: black;
 }
