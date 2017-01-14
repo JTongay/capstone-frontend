@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+.power-logo {
+  height: 50vh;
+  width: 65vw;
+}
+
+h2 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+li {
+  list-style: none;
+}
