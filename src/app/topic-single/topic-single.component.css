@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono');
+.results {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 input, span, label, textarea {
   font-family: 'Ubuntu', sans-serif;
   display: block;
