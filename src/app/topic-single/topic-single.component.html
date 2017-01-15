@@ -7,6 +7,7 @@
         [data]="[pieChartData[0],pieChartData[1],pieChartData[2]]"
         [labels]="pieChartLabels"
         [chartType]="pieChartType"
+        [colors]="pieChartColors"
         (chartClick)="chartClicked($event)"></canvas>
       </div>
       <button [routerLink]="['vote']">Vote</button>

@@ -30,6 +30,7 @@ export class TopicSingleComponent implements OnInit, OnChanges {
   public pieChartLabels:string[] = [];
   public pieChartData:any[] = [];
   public pieChartType:string = 'pie';
+  public pieChartColors:any[] = [{ backgroundColor: ["#84BCDA", "#ECC30B", "#F37748"] }]
 
   // events
   public chartClicked(e:any):void {

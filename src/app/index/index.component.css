@@ -1,13 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono');
 .power-logo {
-  height: 50vh;
-  width: 65vw;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
-h2 {
-  font-family: 'Bungee Shade', cursive;
+.about-section {
+  padding: 50px;
+  background-color: #555150;
+}
+
+.description-section {
+  padding: 50px;
+  background-color: #1E3B5C;
+  color: #FFB33D;
+}
+
+.browse-section {
+  background-color: #D56062;
+}
+
+.twitter-section {
+  padding: 50px;
+  background-color: #555150;
+}
+
+.twitter-timeline {
+  float: right;
+}
+
+h2 h3 h4 p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 4vw;
+  letter-spacing: 0.03em;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: 1.25em;
 }
 
 li {
   list-style: none;
+}
+
+a:link {
+  color: #33348e;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #33348e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #33348e;
+  text-decoration: none;
+}
+
+a:active {
+  color: #7476b4;
+  text-decoration: underline;
 }

@@ -1,32 +1,66 @@
-<div class="text-center">
-  <img src="http://www.thefourthperiod.com/tfppower2.gif" alt="" class="power-logo">
+<div class="text-center about-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-11">
+        <img src="http://i.imgur.com/newxRk0.png" class="img-responsive" title="source: imgur.com" />
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="description-section">
+  <div class="container-fluid">
+
+  <h2 class="text-center">What is Power Ranking?</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
+      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
+      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
+      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
+    </div>
+  </div>
+</div>
+</div>
 <!-- <form novalidate (ngSubmit)="addGenre(genre)" [formGroup]="genre">
   <label for="newGenre">Add a new genre</label>
   <input type="text" formControlName="name" value="" id="newGenre">
   <input type="submit">
 </form> -->
-<div class="row">
-  <div class="col-md-12 text-center">
-    <h2>Browse by Genre</h2>
+<div class="browse-section">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Browse by Genre</h2>
+    </div>
   </div>
-</div>
-<div class="row">
+  <div class="row">
     <ul>
-      <li *ngFor="let genre of genres" class="col-xs-6 col-md-4 text-center">
-        <a [routerLink]="['genres', genre.id, 'topics']" class="thumbnail">
+      <li *ngFor="let genre of genres" class="col-xs-6 col-sm-6 col-md-4 col-lg-4 text-center">
+        <a [routerLink]="['genres', genre.id, 'topics']" class="">
           <h2>{{genre.name}}</h2>
         </a>
       </li>
     </ul>
+  </div>
 </div>
 
-<ul id="ninja-listing">
-  <div class="row text-center">
-    <div class="col-md-12">
+<div class="container-fluid twitter-section">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Anatomy of a Tweet</h2>
+    </div>
+    <div class="col-md-6">
       <a class="twitter-timeline"  href="https://twitter.com/search?q=%40PowerRankingApp" data-widget-id="820005086801825792">Tweets about @PowerRankingApp</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
   </div>
-</ul>
+</div>
