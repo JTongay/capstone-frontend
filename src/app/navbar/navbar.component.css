@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono');
 .navbar {
   margin-bottom: 0;
+  font-family: "Ubuntu"
 }
 
 .navbar-default {

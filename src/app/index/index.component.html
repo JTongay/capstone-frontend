@@ -14,22 +14,24 @@
 <div class="description-section">
   <div class="container-fluid">
 
-  <h2 class="text-center">What is Power Ranking?</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
-      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
-      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="http://i.imgur.com/JB2Ftd6.png" class="img-responsive" title="source: imgur.com" />
-      <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
+    <h1 class="text-center what-is-it">What is Power Ranking?</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="http://i.imgur.com/JB2Ftd6.png" class="logos img-responsive" title="source: imgur.com" />
+        <p class="">Pick your Top Three items in any topic in order. The first item will be your First-Tier item, the second will be Second-Tier item, and your third will be your Third-Tier item. Each tier will generate an added score to the global ranking of each
+          item voted on by an increment of 3 for first-tier, 2 for second-tier, and 1 for third-tier. Your vote counts, so let your opinions be heard to your friends/family and social media platforms.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="http://i.imgur.com/KBbrX7R.png" class="logos img-responsive" title="source: imgur.com" />
+        <p class="">After you pick your Top Three items, you must pick your least favorite item in a topic. That tier is called Garbage-Tier. When an item is voted as Garbage Tier, 3 points will be taken off of that score. </p>
+      </div>
+      <div class="col-md-4">
+        <img src="http://i.imgur.com/OaT7wBQ.png" class="logos img-responsive" title="source: imgur.com" />
+        <p class="">The global ranking will be displayed in a pie chart with the current top-three scores of the given topic. The collective Garbage-Tier item will also be displayed below for everyone to point and laugh at. All items with scores will be towards the
+          right so you can see how close or far away they are.</p>
+      </div>
     </div>
   </div>
-</div>
 </div>
 <!-- <form novalidate (ngSubmit)="addGenre(genre)" [formGroup]="genre">
   <label for="newGenre">Add a new genre</label>
@@ -39,15 +41,22 @@
 <div class="browse-section">
   <div class="row">
     <div class="col-md-12 text-center">
-      <h2>Browse by Genre</h2>
+      <h2 class="browse">Browse by Genre <small>Pick one to view topics</small></h2>
     </div>
   </div>
   <div class="row">
     <ul>
-      <li *ngFor="let genre of genres" class="col-xs-6 col-sm-6 col-md-4 col-lg-4 text-center">
-        <a [routerLink]="['genres', genre.id, 'topics']" class="">
+      <li *ngFor="let genre of genres" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+        <!-- <a [routerLink]="['genres', genre.id, 'topics']" class="">
           <h2>{{genre.name}}</h2>
-        </a>
+        </a> -->
+        <a [routerLink]="['genres', genre.id, 'topics']" class="">
+        <div class="box-3">
+          <div class="btn btn-three">
+            <span>{{genre.name}}</span>
+          </div>
+        </div>
+      </a>
       </li>
     </ul>
   </div>
@@ -56,11 +65,24 @@
 <div class="container-fluid twitter-section">
   <div class="row">
     <div class="col-md-6">
-      <h2>Anatomy of a Tweet</h2>
+      <h2 class="anatomy">Anatomy of a Tweet</h2>
+      <p>In order for your tweet to count in the rankings. You must follow an outline posted below. You must tweet @PowerRankingApp, your first hashtag is the topic, your second hashtag must be any item, and after that say whatever you feel! The only other part is that for any hashtags that require spaces, substitute an underscore (_) instead.</p>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/PowerRankingApp">@PowerRankingApp</a> <a href="https://twitter.com/hashtag/cereal?src=hash">#cereal</a> <a href="https://twitter.com/hashtag/golden_grahams?src=hash">#golden_grahams</a> They are so good I can&#39;t wait until I get more!</p>&mdash; test account (@dirktongay_test) <a href="https://twitter.com/dirktongay_test/status/820468304271773696">January 15, 2017</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <div class="col-md-6">
-      <a class="twitter-timeline"  href="https://twitter.com/search?q=%40PowerRankingApp" data-widget-id="820005086801825792">Tweets about @PowerRankingApp</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%40PowerRankingApp" data-widget-id="820005086801825792">Tweets about @PowerRankingApp</a>
+      <script>
+        ! function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, "script", "twitter-wjs");
+      </script>
     </div>
   </div>
 </div>
