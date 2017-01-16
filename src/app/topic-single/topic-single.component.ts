@@ -42,10 +42,7 @@ export class TopicSingleComponent implements OnInit, OnChanges {
     let topicId = +this.route.snapshot.params['id']
     let requestedUser = this.currentUser['userId']
     this.forms.addNewSubject(requestedUser, genreId, topicId, data.value).subscribe((returned)=>{
-      console.log(returned.json())
-      console.log('booyah')
       this.genre.fetchSingleTopicAll(requestedUser, genreId, topicId).subscribe((data)=>{
-        console.log(data.json())
         this.allSubjects = data.json()
         this.ref.markForCheck();
       })
@@ -73,20 +70,6 @@ export class TopicSingleComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-
-    !function(d,s,id){
-                var js: any,
-                    fjs=d.getElementsByTagName(s)[0],
-                    p='https';
-                if(!d.getElementById(id)){
-                    js=d.createElement(s);
-                    js.id=id;
-                    js.src=p+"://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js,fjs);
-                }
-            }
-            (document,"script","twitter-wjs");
-
     let genreId = +this.route.snapshot.params['genre_id']
     let topicId = +this.route.snapshot.params['id']
     let requestedUser = this.currentUser['userId']
@@ -104,17 +87,14 @@ export class TopicSingleComponent implements OnInit, OnChanges {
     },
     null,
     ()=>{
-      console.log('on completed yo')
       this.ref.markForCheck();
   })
 
     this.genre.fetchSingleTopic(requestedUser, genreId, topicId).subscribe((data)=>{
-      console.log(data)
       this.chosenTopic = data
     })
 
     this.genre.fetchSingleTopicAll(requestedUser, genreId, topicId).subscribe((data)=>{
-      console.log(data.json())
       this.allSubjects = data.json()
       this.ref.markForCheck();
     })

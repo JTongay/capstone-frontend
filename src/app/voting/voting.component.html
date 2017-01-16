@@ -1,19 +1,34 @@
-<form novalidate (ngSubmit)="castVote(votes)" [formGroup]="votes">
-  <label for="first">First Tier</label>
-  <select class="form-control" formControlName="first" required>
-    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="first">{{subject?.name}}</option>
-  </select>
-  <label for="second">Second Tier</label>
-  <select class="form-control" formControlName="second" required>
-    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="second">{{subject?.name}}</option>
-  </select>
-  <label for="third">Third Tier</label>
-  <select class="form-control" formControlName="third" required>
-    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="third">{{subject?.name}}</option>
-  </select>
-  <label for="garbage">Garbage Tier</label>
-  <select class="form-control" formControlName="garbage" required>
-    <option *ngFor="let subject of allSubjects" [value]="subject.id" id="garbage">{{subject?.name}}</option>
-  </select>
-  <input type="submit">
-</form>
+<div class="vote">
+<div class="container text-center">
+  <h1>Your vote for top-three and garbage tier {{chosenTopic?.title | lowercase}}</h1>
+  <p>Your vote counts! You may vote as many times as you like as long as you select every option.</p>
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-lg-8">
+      <form novalidate (ngSubmit)="castVote(votes)" [formGroup]="votes">
+        <label for="first">First Tier</label>
+        <select class="form-control" formControlName="first" required>
+          <option *ngFor="let subject of allSubjects" [value]="subject.id" id="first">{{subject?.name | lowercase}}</option>
+        </select>
+        <label for="second">Second Tier</label>
+        <select class="form-control" formControlName="second" required>
+          <option *ngFor="let subject of allSubjects" [value]="subject.id" id="second">{{subject?.name | lowercase}}</option>
+        </select>
+        <label for="third">Third Tier</label>
+        <select class="form-control" formControlName="third" required>
+          <option *ngFor="let subject of allSubjects" [value]="subject.id" id="third">{{subject?.name | lowercase}}</option>
+        </select>
+        <label for="garbage">Garbage Tier</label>
+        <select class="form-control" formControlName="garbage" required>
+          <option *ngFor="let subject of allSubjects" [value]="subject.id" id="garbage">{{subject?.name | lowercase}}</option>
+        </select>
+        <input type="submit" class="btn btn-success sub-button pull-right">
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

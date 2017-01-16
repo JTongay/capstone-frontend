@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono');
+.vote {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-size: 2rem;
+}
+
+label {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  margin-top: 12px;
+}
+
+.sub-button {
+  margin-top: 20px;
+}
