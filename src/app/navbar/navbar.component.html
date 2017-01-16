@@ -13,12 +13,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <div *ngIf="!currentUser.loggedIn">
-          <li><a [routerLink]="['signup']">Signup</a></li>
-          <li><a [routerLink]="['login']">Log In</a></li>
-        </div>
-        <li><a [routerLink]="['users']" *ngIf="currentUser.role === admin">All users</a></li>
-        <li><a [routerLink]="['users', currentUser.userId]">Your Account</a></li>
+        <li><a [routerLink]="['signup']" *ngIf="!currentUser.loggedIn">Signup</a></li>
+        <li><a [routerLink]="['login']" *ngIf="!currentUser.loggedIn">Log In</a></li>
+        <li><a [routerLink]="['users']" *ngIf="currentUser.loggedIn">All users</a></li>
+        <li><a [routerLink]="['users', currentUser.userId]" *ngIf="currentUser.loggedIn">Your Account</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div *ngIf="currentUser.loggedIn">

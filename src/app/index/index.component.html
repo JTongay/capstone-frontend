@@ -38,7 +38,7 @@
   <input type="text" formControlName="name" value="" id="newGenre">
   <input type="submit">
 </form> -->
-<div class="browse-section">
+<div class="browse-section" *ngIf="currentUser.loggedIn">
   <div class="row">
     <div class="col-md-12 text-center">
       <h2 class="browse">Browse by Genre <small>Pick one to view topics</small></h2>

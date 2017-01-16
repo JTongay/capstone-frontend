@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3 class="text-center">Top Three: {{chosenTopic?.title}}</h3>
+      <h3 class="the-ballot">Top Three: {{chosenTopic?.title}}</h3>
       <div style="display: block">
         <canvas baseChart
         [data]="[pieChartData[0],pieChartData[1],pieChartData[2]]"
@@ -11,14 +11,9 @@
         [colors]="pieChartColors"
         (chartClick)="chartClicked($event)"></canvas>
       </div>
-      <button [routerLink]="['vote']">Vote</button>
     </div>
     <div class="col-md-6">
-      <h2>The Ballot</h2>
-      <p><ins>Don't see a subject you like? Add it here.</ins></p>
-      <div class="ballot">
-        <p *ngFor="let subject of allSubjects">{{subject?.name}} | Current Score {{subject?.score}}</p>
-      </div>
+      <h2 class="the-ballot">The Ballot</h2>
       <div class="add-new-subject">
         <form novalidate (ngSubmit)="addNewSubject(subject)" [formGroup]="subject">
           <span id="helpBlock" class="help-block">Raise a new item to the ballot</span>
@@ -27,12 +22,17 @@
           <input type="submit" class="btn btn-primary">
         </form>
       </div>
+      <div class="ballot">
+        <p *ngFor="let subject of allSubjects">{{subject?.name}} | Current Score {{subject?.score}}</p>
+      </div>
+      <a [routerLink]="['vote']">
+        <div class="box-3">
+          <div class="btn btn-three">
+            <span>Vote</span>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
-</div>
-
-<div class="container-fluid">
-  <a class="twitter-timeline"  href="https://twitter.com/search?q=%40PowerRankingApp" data-widget-id="820005086801825792">Tweets about @PowerRankingApp</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
