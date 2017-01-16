@@ -12,11 +12,9 @@ export class SignupComponent implements OnInit {
 
   signUp(form: NgForm){
     this.forms.submitNewUser(form.value).subscribe((data)=>{
-      console.log(data.json())
       localStorage.setItem('loggedIn', 'true')
       localStorage.setItem('userName', data.json().username);
       localStorage.setItem('userId', data.json().id);
-      console.log(localStorage)
       this.router.navigate([''])
     });
   }

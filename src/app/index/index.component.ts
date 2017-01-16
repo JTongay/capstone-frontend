@@ -18,14 +18,6 @@ export class IndexComponent implements OnInit, OnChanges, AfterViewInit {
 
   genres: any[];
 
-  addGenre(data){
-    let requestedUser = this.currentUser['userId']
-    console.log(data.value.name.toUpperCase())
-    // this.fetcher.addNewGenre(requestedUser, data.value).subscribe((genre)=>{
-    //   console.log(genre)
-    // })
-  }
-
   ngAfterViewInit(){
     !function(d,s,id){
                 var js: any,
@@ -42,20 +34,7 @@ export class IndexComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngOnChanges(){
-    // if (this.router.url === '/'){
-    //   !function(d,s,id){
-    //     var js: any,
-    //     fjs=d.getElementsByTagName(s)[0],
-    //     p='https';
-    //     if(!d.getElementById(id)){
-    //       js=d.createElement(s);
-    //       js.id=id;
-    //       js.src=p+"://platform.twitter.com/widgets.js";
-    //       fjs.parentNode.insertBefore(js,fjs);
-    //     }
-    //   }
-    //   (document,"script","twitter-wjs");
-    // }
+
   }
 
   constructor(
@@ -76,21 +55,6 @@ export class IndexComponent implements OnInit, OnChanges, AfterViewInit {
         this.genres = data;
       }
     )
-
-    // if (this.router.url === '/'){
-    //   !function(d,s,id){
-    //     var js: any,
-    //     fjs=d.getElementsByTagName(s)[0],
-    //     p='https';
-    //     if(!d.getElementById(id)){
-    //       js=d.createElement(s);
-    //       js.id=id;
-    //       js.src=p+"://platform.twitter.com/widgets.js";
-    //       fjs.parentNode.insertBefore(js,fjs);
-    //     }
-    //   }
-    //   (document,"script","twitter-wjs");
-    // }
 
   }
 

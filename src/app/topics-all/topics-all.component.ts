@@ -23,7 +23,6 @@ export class TopicsAllComponent implements OnInit {
     let requestedUser = this.currentUser['userId']
     console.log(data.value)
     this.forms.addNewTopic(requestedUser, genreId, data.value).subscribe((topic)=>{
-      console.log(topic.json())
       this.genre.fetchTopics(requestedUser, genreId).subscribe((data)=>{
         this.topics = data
       })

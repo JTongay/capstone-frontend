@@ -25,7 +25,6 @@ export class AccountComponent implements OnInit {
     let id = +this.route.snapshot.params['id']
 
     this.user.getOneUser(id).subscribe((user)=>{
-      console.log(user)
       this.userAccount = user
     })
   }

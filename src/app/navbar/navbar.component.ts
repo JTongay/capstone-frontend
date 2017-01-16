@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
     this.currentUser.removeItem('loggedIn')
     this.currentUser.removeItem('userId')
     this.currentUser.removeItem('userName')
-    console.log('logout')
     this.router.navigate(['login'])
   }
 

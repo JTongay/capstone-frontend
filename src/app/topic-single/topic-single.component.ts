@@ -75,7 +75,6 @@ export class TopicSingleComponent implements OnInit, OnChanges {
     let requestedUser = this.currentUser['userId']
 
     this.genre.fetchSingleTopicTop(requestedUser, genreId, topicId).subscribe((data)=>{
-      console.log(data)
       this.topThree = data
       this.topThree.forEach((item)=>{
         this.pieChartLabels.push(item.name)

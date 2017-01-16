@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*@import 'normalize.css';
+@import 'skeleton.css';*/
+
+
+/*.nav-bar-container {
+  display: flex;
+  justify-content: flex-start;
+  background-color: grey;
+  margin: 0;
+}*/
+
+ul {
+  list-style: none;
+}
+
+.power-nav {
+  background-color: black;
+  color: black;
+}
+
+/*# sourceMappingURL=styles.bundle.map*/

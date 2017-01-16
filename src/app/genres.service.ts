@@ -5,10 +5,6 @@ import 'rxjs/Rx';
 @Injectable()
 export class GenresService {
 
-  log(){
-    console.log("I'm from the genres service")
-  }
-
   constructor(private http:Http) { }
 
   addNewGenre(userId: any, data: any){
