@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono');
+.all-users-container {
+  display: flex;
+}
+
+.all-users {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #00ad4b;
+  color: #FFB33D;
+  flex-grow: 2;
+}

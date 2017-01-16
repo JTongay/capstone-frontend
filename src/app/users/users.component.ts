@@ -10,10 +10,12 @@ export class UsersComponent implements OnInit {
 
   constructor(private users: UserService) { }
 
+  allUsers: any;
+
   ngOnInit() {
     this.users.getAllUsers().subscribe(
       (user)=>{
-        console.log(user)
+        this.allUsers = user
       }
     )
   }
