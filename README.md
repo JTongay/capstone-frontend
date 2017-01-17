@@ -1,5 +1,9 @@
 # Power Ranking App
 
+This is the Front-End portion of the project. To see my custom API and Server, checkout my other respository. 
+
+https://github.com/JTongay/capstone-backend
+
 This is my Galvanize Capstone Project that was done in 2 weeks as a culmination of everything I had learned in the past 6 months.
 
 To see the live application, it is deployed to an AWS S3 Bucket at the link below.
