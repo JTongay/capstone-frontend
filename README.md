@@ -1,5 +1,7 @@
 # Power Ranking App
 
+This is my Galvanize Capstone Project that was done in 2 weeks as a culmination of everything I had learned in the past 6 months.
+
 To see the live application, it is deployed to an AWS S3 Bucket at the link below.
 
 http://power-rank.com.s3-website-us-west-2.amazonaws.com/
@@ -16,4 +18,13 @@ http://power-rank.com.s3-website-us-west-2.amazonaws.com/
 * We would debate silly topics for hours. The best part about it was that our relationships grew as a cause, and we would never run out of topics to talk about.
 * Another advantage is that it distracts people from more serious topics that shouldn't usually be debated (politics, religion) and creates more fun conversations.
 
+# Technologies Used
+
+This repository is built with Angular 2. It was my first experience transitioning from Angular 1.5 to 2, and I would totally continue working with it.
+
+![Angular2](https://www.ag-grid.com/images/angular2.png)
+
+For quick styling, I chose bootstrap because of its comprehensive grid system and components.
+
+![Bootstrap](http://res.cloudinary.com/dnkqgvjbd/image/upload/v1451679096/bootstrap_xfpqre.png)
 
