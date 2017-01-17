@@ -4,7 +4,7 @@ To see the live application, it is deployed to an AWS S3 Bucket at the link belo
 
 http://power-rank.com.s3-website-us-west-2.amazonaws.com/
 
-[Imgur](http://i.imgur.com/K33XeUc.png)
+![Imgur](http://i.imgur.com/K33XeUc.png)
 
 # What is Power Ranking?
 
