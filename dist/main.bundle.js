@@ -33,9 +33,6 @@ var GenresService = (function () {
     function GenresService(http) {
         this.http = http;
     }
-    GenresService.prototype.log = function () {
-        console.log("I'm from the genres service");
-    };
     GenresService.prototype.addNewGenre = function (userId, data) {
         return this.http
             .post("https://cryptic-island-60223.herokuapp.com/api/users/" + userId + "/genres/new", data);
@@ -113,13 +110,6 @@ var IndexComponent = (function () {
             name: ''
         });
     }
-    IndexComponent.prototype.addGenre = function (data) {
-        var requestedUser = this.currentUser['userId'];
-        console.log(data.value.name.toUpperCase());
-        // this.fetcher.addNewGenre(requestedUser, data.value).subscribe((genre)=>{
-        //   console.log(genre)
-        // })
-    };
     IndexComponent.prototype.ngAfterViewInit = function () {
         !function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0], p = 'https';
@@ -132,40 +122,12 @@ var IndexComponent = (function () {
         }(document, "script", "twitter-wjs");
     };
     IndexComponent.prototype.ngOnChanges = function () {
-        // if (this.router.url === '/'){
-        //   !function(d,s,id){
-        //     var js: any,
-        //     fjs=d.getElementsByTagName(s)[0],
-        //     p='https';
-        //     if(!d.getElementById(id)){
-        //       js=d.createElement(s);
-        //       js.id=id;
-        //       js.src=p+"://platform.twitter.com/widgets.js";
-        //       fjs.parentNode.insertBefore(js,fjs);
-        //     }
-        //   }
-        //   (document,"script","twitter-wjs");
-        // }
     };
     IndexComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.fetcher.fetchGenres(this.currentUser.userId).subscribe(function (data) {
             _this.genres = data;
         });
-        // if (this.router.url === '/'){
-        //   !function(d,s,id){
-        //     var js: any,
-        //     fjs=d.getElementsByTagName(s)[0],
-        //     p='https';
-        //     if(!d.getElementById(id)){
-        //       js=d.createElement(s);
-        //       js.id=id;
-        //       js.src=p+"://platform.twitter.com/widgets.js";
-        //       fjs.parentNode.insertBefore(js,fjs);
-        //     }
-        //   }
-        //   (document,"script","twitter-wjs");
-        // }
     };
     IndexComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -263,7 +225,6 @@ var AccountComponent = (function () {
         var _this = this;
         var id = +this.route.snapshot.params['id'];
         this.user.getOneUser(id).subscribe(function (user) {
-            console.log(user);
             _this.userAccount = user;
         });
     };
@@ -399,7 +360,6 @@ var NavbarComponent = (function () {
         this.currentUser.removeItem('loggedIn');
         this.currentUser.removeItem('userId');
         this.currentUser.removeItem('userName');
-        console.log('logout');
         this.router.navigate(['login']);
     };
     NavbarComponent.prototype.ngOnInit = function () {
@@ -448,11 +408,9 @@ var SignupComponent = (function () {
     SignupComponent.prototype.signUp = function (form) {
         var _this = this;
         this.forms.submitNewUser(form.value).subscribe(function (data) {
-            console.log(data.json());
             localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('userName', data.json().username);
             localStorage.setItem('userId', data.json().id);
-            console.log(localStorage);
             _this.router.navigate(['']);
         });
     };
@@ -544,7 +502,6 @@ var TopicSingleComponent = (function () {
         var topicId = +this.route.snapshot.params['id'];
         var requestedUser = this.currentUser['userId'];
         this.genre.fetchSingleTopicTop(requestedUser, genreId, topicId).subscribe(function (data) {
-            console.log(data);
             _this.topThree = data;
             _this.topThree.forEach(function (item) {
                 _this.pieChartLabels.push(item.name);
@@ -622,7 +579,6 @@ var TopicsAllComponent = (function () {
         var requestedUser = this.currentUser['userId'];
         console.log(data.value);
         this.forms.addNewTopic(requestedUser, genreId, data.value).subscribe(function (topic) {
-            console.log(topic.json());
             _this.genre.fetchTopics(requestedUser, genreId).subscribe(function (data) {
                 _this.topics = data;
             });
