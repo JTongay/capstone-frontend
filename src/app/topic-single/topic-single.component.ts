@@ -4,8 +4,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FormArray, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { FormsService } from '../forms.service';
 
-
-
 @Component({
   selector: 'app-topic-single',
   templateUrl: './topic-single.component.html',
@@ -80,9 +78,9 @@ export class TopicSingleComponent implements OnInit, OnChanges {
         this.pieChartLabels.push(item.name)
         let scoreInt = parseInt(item.score)
         this.pieChartData.push(scoreInt)
-        this.ref.markForCheck();
       })
-      // console.log(this.ref.detectChanges)
+      this.ref.markForCheck();
+      console.log(this.ref.markForCheck())
     },
     null,
     ()=>{
