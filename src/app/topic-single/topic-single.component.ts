@@ -81,6 +81,7 @@ export class TopicSingleComponent implements OnInit, OnChanges {
       })
       this.ref.markForCheck();
       console.log(this.ref.markForCheck())
+      console.log("booyah")
     },
     null,
     ()=>{
